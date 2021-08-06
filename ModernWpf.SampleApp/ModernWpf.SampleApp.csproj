@@ -2,20 +2,14 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net45;net48;netcoreapp3.1;net5.0-windows10.0.18362.0</TargetFrameworks>
+    <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Assets\AppIcon.ico</ApplicationIcon>
     <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net45'">
-    <ApplicationManifest>app.net45.manifest</ApplicationManifest>
+				<ApplicationManifest>app.manifest</ApplicationManifest>
+				<StartupObject>ModernWpf.SampleApp.App</StartupObject>
   </PropertyGroup>
     
-  <PropertyGroup Condition="'$(TargetFramework)' != 'net45'">
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-  </PropertyGroup>
-
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
